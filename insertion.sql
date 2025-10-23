@@ -1,0 +1,16 @@
+INSERT INTO fournisseurs(NOM) VALUES ('Française d’Imports');
+INSERT INTO fournisseurs(NOM) VALUES ('FDM SA');
+INSERT INTO fournisseurs(NOM) VALUES ('Dubois & Fils');
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('A01', 'Perceuse P1', 74.99, 1);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('F01', 'Boulon laiton 4 x 40 mm (sachet de 10)', 2.25, 2);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('F02', 'Boulon laiton 5 x 40 mm (sachet de 10)', 4.45, 2);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('D01', 'Boulon laiton 5 x 40 mm (sachet de 10)', 4.40, 3);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('A02', 'Meuleuse 125mm', 37.85, 1);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('D03', 'Boulon acier zingué 4 x 40mm (sachet de 10)', 1.80, 3);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('A03', 'Perceuse à colonne', 185.25, 1);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('D04', 'Coffret mêches à bois', 12.25, 3);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('F03', 'Coffret mêches plates', 6.25, 2);
+INSERT INTO article(REF,DESIGNATION,PRIX,ID_FOU) VALUES ('F04', 'Fraises d''encastrement', 8.14, 2);
+INSERT INTO bon(NUMERO,DATE_CMDE,DELAI,ID_FOU) VALUES (1,'2025/10/23 15:36:00',10,1);
+INSERT INTO compo(ID_ART,ID_BON,QTE) VALUES (1,1,3),(5,1,4),(7,1,1);
+update bon set bon.DELAI=3 where bon.ID=1;
