@@ -1,0 +1,10 @@
+select * from article;
+SELECT article.ref, article.designation FROM `article` WHERE article.prix>2;
+SELECT article.ref, article.designation FROM `article` WHERE article.prix>2 AND article.prix<6.25;
+SELECT article.ref, article.designation FROM `article` WHERE article.prix BETWEEN 2 and 6.25;
+SELECT article.ref, article.designation FROM `article` WHERE article.prix BETWEEN 2 and 6.25;
+SELECT * FROM article,fournisseur WHERE !(article.prix>2 AND article.prix<6.25) and fournisseur.nom like 'Française d''imports' ORDER BY article.prix DESC;
+SELECT * FROM article,fournisseur WHERE fournisseur.nom like 'Française d''imports' OR fournisseur.nom like 'Dubois & Fils';
+SELECT * FROM article,fournisseur WHERE fournisseur.nom in ('Française d''imports','Dubois & Fils');
+SELECT * FROM article,fournisseur WHERE fournisseur.nom not in ('Française d''imports','Dubois & Fils');
+SELECT * FROM bon WHERE date_cmde between '2019-02-01' and '2019-04-30';
